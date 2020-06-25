@@ -23,10 +23,20 @@ db.once('open', function() {
 var appRoutes = require('./routes/app');
 var usuarioRoutes = require('./routes/usuario');
 var loginRoutes = require('./routes/login');
+var hospitalesRoutes = require('./routes/hospital');
+var medicosRoutes = require('./routes/medico');
+var busquedasRoutes = require('./routes/busqueda');
+var uploadRoutes = require('./routes/upload');
+var imagenesRoutes = require('./routes/img');
 
 // RUTAS
 app.use('/usuario', usuarioRoutes);
 app.use('/login', loginRoutes);
+app.use('/hospital', hospitalesRoutes);
+app.use('/medico', medicosRoutes);
+app.use('/busqueda', busquedasRoutes);
+app.use('/upload', uploadRoutes);
+app.use('/img', imagenesRoutes);
 app.use('/', appRoutes);
 
 
