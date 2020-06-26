@@ -3,7 +3,15 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 // Inicializar variables
+var cors = require('cors');
 var app = express();
+app.use(cors());
+// CORS
+/* app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+}); */
 
 // BODY PARSER
 // parse application/x-www-form-urlencoded
